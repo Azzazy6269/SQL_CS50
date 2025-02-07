@@ -23,10 +23,11 @@ CREATE TABLE "meteorites"(
     "lat" REAL ,
     "long" REAL
 );
-
---cat import.sql | sqlite3 metertites.db
-.import --csv --skip 1 meteorites.csv "meteorites_temp"
-
+/*After creating the tables write one of the two next comments in the terminal 
+1)cat import.sql | sqlite3 metertites.db
+2).import --csv --skip 1 meteorites.csv "meteorites_temp"
+*/
+-- you can also use ATTACH
 /*
 -- Attach the external SQLite database where the CSV was imported
 ATTACH DATABASE 'csv_import.db' AS csv_db;
@@ -81,5 +82,4 @@ FROM "meteorites_temp";
 -- DROP the temporary table
 DROP TABLE "meteorites_temp";
 
---cat import.sql | sqlite3 meteorites.db
---("name","id","nametype","class","mass","discovery","year","lat","long")
+
