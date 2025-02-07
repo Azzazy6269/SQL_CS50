@@ -27,7 +27,7 @@ CREATE TABLE "meteorites"(
 1)cat import.sql | sqlite3 metertites.db
 2).import --csv --skip 1 meteorites.csv "meteorites_temp"
 */
--- you can also use ATTACH
+-- you can instead use ATTACH
 /*
 -- Attach the external SQLite database where the CSV was imported
 ATTACH DATABASE 'csv_import.db' AS csv_db;
