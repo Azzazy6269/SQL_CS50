@@ -1,0 +1,7 @@
+SELECT "title", COUNT("title") FROM "votes" GROUP BY "title";
+UPDATE "votes" SET "title" = trim("title");-- i didn't write "WHERE....." because i need the update for all rows
+UPDATE "votes" SET "title" = UPPER("title");
+UPDATE "votes" SET "title" = LOWER("title");
+UPDATE "votes" SET "title" = 'FARMERS WORKING AT DAWN' WHERE "title" LIKE 'FAR%';
+UPDATE "meteorites_temp" SET "mass" = NULL WHERE TRIM("mass") = '';
+UPDATE "meteorites_temp" SET "mass" = ROUND("mass",2);
