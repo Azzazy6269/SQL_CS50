@@ -1,4 +1,12 @@
---DROP VIEW IF EXISTS "no_descriptions" ;
+/* initially,
+.read one_bedrooms.sql
+.read available.sql
+.read frequently_reviewed.sql
+.read june_vacancies.sql
+.read no_descriptions.sql
+*/
+
+DROP VIEW IF EXISTS "no_descriptions" ;
 CREATE VIEW "no_descriptions" AS
 
 (SELECT COUNT("id") FROM "listings")
@@ -24,14 +32,6 @@ CREATE VIEW "no_descriptions" AS
  AS "num_of_properyies_available_in_june"
  ;
 
---SELECT "most_reviewd" FROM "no_descriptions";
 
 
-/* initially,
-.read one_bedrooms.sql
-.read available.sql
-.read frequently_reviewed.sql
-.read june_vacancies.sql
-.read no_descriptions.sql
-*/
--- .read no_descriptions.sql
+
